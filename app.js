@@ -49,6 +49,6 @@ app.use(indexRoutes);
 app.use(campgroundRoutes);
 app.use("/:id/comments",commentRoutes);
 
-app.listen(process.env.PORT, process.env.IP, function(){
-    console.log("The Server Is listening at:" + process.env.PORT);
+app.listen(3000, function(){
+    console.log("The Server Is listening at: 3000");
 });
