@@ -9,7 +9,7 @@ var user = require("./models/user");
 var methodOverride = require("method-override");
 
 
-mongoose.connect("mongodb://localhost/two");
+mongoose.connect("mongodb+srv://samyek:123@test1-izuia.mongodb.net/test?retryWrites=true");
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(methodOverride("_method"));
