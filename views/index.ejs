@@ -1,0 +1,32 @@
+<% include partials/header %>
+
+
+<div class="container">
+<header class="jumbotron">
+        <div class="container">
+    <h1>The test page from Sam!</h1>
+    <p>See all the posts which are created with node.js</p>
+    <p>
+            <a class="btn btn-primary btn-large" href="/new">Add New Post</a>
+    </p>
+    </div>
+</header>
+<div class="row text-center img-fluid">
+        <% data.forEach(function(e){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="img-thumbnail">
+                        <img src="<%=e["image"]%>">
+                </div>
+                <div class="caption">
+                        <h4><%=e["title"]%></h4>
+                </div>
+                <p>
+                        <a href="/<%=e._id%>" class="btn btn-primary">More</a>
+                </p>
+            </div>
+        <% }) %>
+</div>
+
+</div>
+
+<% include partials/footer %>
